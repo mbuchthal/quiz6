@@ -5,3 +5,7 @@ app.get("/endpoint", function (req, res) {
   var randomGreeting = Math.Floor(Math.Random() * hello.length);
   res.json( { "greeting": hello[randomGreeting] })
 });
+
+$.get("http://localhost:3000/hello", function (res) {
+  $('p').html("Hello");
+});
