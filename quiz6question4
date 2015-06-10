@@ -1,0 +1,7 @@
+
+var hello = ["hello", "bonjour", "ni hao", "gutentag"];
+
+app.get("/endpoint", function (req, res) {
+  var randomGreeting = Math.Floor(Math.Random() * hello.length);
+  res.json( { "greeting": hello[randomGreeting] })
+});
